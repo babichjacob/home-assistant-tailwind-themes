@@ -1,0 +1,824 @@
+frontend:
+  themes:
+    tailwind-light-blue:
+      <<: &colors
+        transparent: "transparent"
+        white: "#ffffff"
+        black: "#000000"
+
+        gray-50: "#f9fafb"
+        gray-100: "#f4f5f7"
+        gray-200: "#e5e7eb"
+        gray-300: "#d2d6dc"
+        gray-400: "#9fa6b2"
+        gray-500: "#6b7280"
+        gray-600: "#4b5563"
+        gray-700: "#374151"
+        gray-800: "#252f3f"
+        gray-900: "#161e2e"
+
+        cool-gray-50: "#fbfdfe"
+        cool-gray-100: "#f1f5f9"
+        cool-gray-200: "#e2e8f0"
+        cool-gray-300: "#cfd8e3"
+        cool-gray-400: "#97a6ba"
+        cool-gray-500: "#64748b"
+        cool-gray-600: "#475569"
+        cool-gray-700: "#364152"
+        cool-gray-800: "#27303f"
+        cool-gray-900: "#1a202e"
+
+        red-50: "#fdf2f2"
+        red-100: "#fde8e8"
+        red-200: "#fbd5d5"
+        red-300: "#f8b4b4"
+        red-400: "#f98080"
+        red-500: "#f05252"
+        red-600: "#e02424"
+        red-700: "#c81e1e"
+        red-800: "#9b1c1c"
+        red-900: "#771d1d"
+
+        orange-50: "#fff8f1"
+        orange-100: "#feecdc"
+        orange-200: "#fcd9bd"
+        orange-300: "#fdba8c"
+        orange-400: "#ff8a4c"
+        orange-500: "#ff5a1f"
+        orange-600: "#d03801"
+        orange-700: "#b43403"
+        orange-800: "#8a2c0d"
+        orange-900: "#771d1d"
+
+        yellow-50: "#fdfdea"
+        yellow-100: "#fdf6b2"
+        yellow-200: "#fce96a"
+        yellow-300: "#faca15"
+        yellow-400: "#e3a008"
+        yellow-500: "#c27803"
+        yellow-600: "#9f580a"
+        yellow-700: "#8e4b10"
+        yellow-800: "#723b13"
+        yellow-900: "#633112"
+
+        green-50: "#f3faf7"
+        green-100: "#def7ec"
+        green-200: "#bcf0da"
+        green-300: "#84e1bc"
+        green-400: "#31c48d"
+        green-500: "#0e9f6e"
+        green-600: "#057a55"
+        green-700: "#046c4e"
+        green-800: "#03543f"
+        green-900: "#014737"
+
+        teal-50: "#edfafa"
+        teal-100: "#d5f5f6"
+        teal-200: "#afecef"
+        teal-300: "#7edce2"
+        teal-400: "#16bdca"
+        teal-500: "#0694a2"
+        teal-600: "#047481"
+        teal-700: "#036672"
+        teal-800: "#05505c"
+        teal-900: "#014451"
+
+        blue-50: "#ebf5ff"
+        blue-100: "#e1effe"
+        blue-200: "#c3ddfd"
+        blue-300: "#a4cafe"
+        blue-400: "#76a9fa"
+        blue-500: "#3f83f8"
+        blue-600: "#1c64f2"
+        blue-700: "#1a56db"
+        blue-800: "#1e429f"
+        blue-900: "#233876"
+
+        indigo-50: "#f0f5ff"
+        indigo-100: "#e5edff"
+        indigo-200: "#cddbfe"
+        indigo-300: "#b4c6fc"
+        indigo-400: "#8da2fb"
+        indigo-500: "#6875f5"
+        indigo-600: "#5850ec"
+        indigo-700: "#5145cd"
+        indigo-800: "#42389d"
+        indigo-900: "#362f78"
+
+        purple-50: "#f6f5ff"
+        purple-100: "#edebfe"
+        purple-200: "#dcd7fe"
+        purple-300: "#cabffd"
+        purple-400: "#ac94fa"
+        purple-500: "#9061f9"
+        purple-600: "#7e3af2"
+        purple-700: "#6c2bd9"
+        purple-800: "#5521b5"
+        purple-900: "#4a1d96"
+
+        pink-50: "#fdf2f8"
+        pink-100: "#fce8f3"
+        pink-200: "#fad1e8"
+        pink-300: "#f8b4d9"
+        pink-400: "#f17eb8"
+        pink-500: "#e74694"
+        pink-600: "#d61f69"
+        pink-700: "#bf125d"
+        pink-800: "#99154b"
+        pink-900: "#751a3d"
+
+        classic-gray-100: "#f7fafc"
+        classic-gray-200: "#edf2f7"
+        classic-gray-300: "#e2e8f0"
+        classic-gray-400: "#cbd5e0"
+        classic-gray-500: "#a0aec0"
+        classic-gray-600: "#718096"
+        classic-gray-700: "#4a5568"
+        classic-gray-800: "#2d3748"
+        classic-gray-900: "#1a202c"
+
+        classic-red-100: "#fff5f5"
+        classic-red-200: "#fed7d7"
+        classic-red-300: "#feb2b2"
+        classic-red-400: "#fc8181"
+        classic-red-500: "#f56565"
+        classic-red-600: "#e53e3e"
+        classic-red-700: "#c53030"
+        classic-red-800: "#9b2c2c"
+        classic-red-900: "#742a2a"
+
+        classic-orange-100: "#fffaf0"
+        classic-orange-200: "#feebc8"
+        classic-orange-300: "#fbd38d"
+        classic-orange-400: "#f6ad55"
+        classic-orange-500: "#ed8936"
+        classic-orange-600: "#dd6b20"
+        classic-orange-700: "#c05621"
+        classic-orange-800: "#9c4221"
+        classic-orange-900: "#7b341e"
+
+        classic-yellow-100: "#fffff0"
+        classic-yellow-200: "#fefcbf"
+        classic-yellow-300: "#faf089"
+        classic-yellow-400: "#f6e05e"
+        classic-yellow-500: "#ecc94b"
+        classic-yellow-600: "#d69e2e"
+        classic-yellow-700: "#b7791f"
+        classic-yellow-800: "#975a16"
+        classic-yellow-900: "#744210"
+
+        classic-green-100: "#f0fff4"
+        classic-green-200: "#c6f6d5"
+        classic-green-300: "#9ae6b4"
+        classic-green-400: "#68d391"
+        classic-green-500: "#48bb78"
+        classic-green-600: "#38a169"
+        classic-green-700: "#2f855a"
+        classic-green-800: "#276749"
+        classic-green-900: "#22543d"
+
+        classic-teal-100: "#e6fffa"
+        classic-teal-200: "#b2f5ea"
+        classic-teal-300: "#81e6d9"
+        classic-teal-400: "#4fd1c5"
+        classic-teal-500: "#38b2ac"
+        classic-teal-600: "#319795"
+        classic-teal-700: "#2c7a7b"
+        classic-teal-800: "#285e61"
+        classic-teal-900: "#234e52"
+
+        classic-blue-100: "#ebf8ff"
+        classic-blue-200: "#bee3f8"
+        classic-blue-300: "#90cdf4"
+        classic-blue-400: "#63b3ed"
+        classic-blue-500: "#4299e1"
+        classic-blue-600: "#3182ce"
+        classic-blue-700: "#2b6cb0"
+        classic-blue-800: "#2c5282"
+        classic-blue-900: "#2a4365"
+
+        classic-indigo-100: "#ebf4ff"
+        classic-indigo-200: "#c3dafe"
+        classic-indigo-300: "#a3bffa"
+        classic-indigo-400: "#7f9cf5"
+        classic-indigo-500: "#667eea"
+        classic-indigo-600: "#5a67d8"
+        classic-indigo-700: "#4c51bf"
+        classic-indigo-800: "#434190"
+        classic-indigo-900: "#3c366b"
+
+        classic-purple-100: "#faf5ff"
+        classic-purple-200: "#e9d8fd"
+        classic-purple-300: "#d6bcfa"
+        classic-purple-400: "#b794f4"
+        classic-purple-500: "#9f7aea"
+        classic-purple-600: "#805ad5"
+        classic-purple-700: "#6b46c1"
+        classic-purple-800: "#553c9a"
+        classic-purple-900: "#44337a"
+
+        classic-pink-100: "#fff5f7"
+        classic-pink-200: "#fed7e2"
+        classic-pink-300: "#fbb6ce"
+        classic-pink-400: "#f687b3"
+        classic-pink-500: "#ed64a6"
+        classic-pink-600: "#d53f8c"
+        classic-pink-700: "#b83280"
+        classic-pink-800: "#97266d"
+        classic-pink-900: "#702459"
+
+      <<: &fonts
+        primary-font-family: '-apple-system, BlinkMacSystemFont, "San Francisco", system-ui, "Google Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+        ha-card-header-font-family: "var(--primary-font-family)"
+      
+      <<: &aliases
+        paper-card-background-color: "var(--background-card-color)"
+        primary-background-color: "var(--background-color)"
+        secondary-background-color: "var(--background-card-color)"
+        dark-primary-color: "var(--text-color)"
+        primary-text-color: "var(--text-color)"
+        paper-listbox-color: "var(--text-color)"
+        paper-listbox-background-color: "var(--background-color)"
+        disabled-text-color: "var(--text-light-color)"
+        light-primary-color: "var(--text-medium-color)"
+        secondary-text-color: "var(--text-medium-color)"
+
+        # Icon off
+        paper-item-icon-color: "var(--text-medium-color)"
+        # Icon on
+        paper-item-icon-active-color: "var(--accent-color)"
+
+        # Inputs, like the date picker or entity pickers
+        material-background-color: "var(--background-card-color)"
+        material-secondary-background-color: "var(--background-color)"
+        material-primary-text-color: "var(--primary-text-color)"
+        material-secondary-text-color: "var(--secondary-text-color)"
+        material-divider-color: "var(--material-secondary-background-color)"
+        paper-input-container-focus-color: "var(--accent-color)"
+        
+        # More info dialogs
+        paper-dialog-background-color: "var(--background-card-color)"
+        more-info-header-background: "var(--background-card-color)"
+
+        # Sliders
+        paper-slider-pin-color: "var(--paper-slider-knob-color)"
+        paper-slider-knob-start-color: "var(--paper-slider-knob-color)"
+        paper-slider-knob-start-border-color: "var(--paper-slider-knob-start-color)"
+        paper-slider-pin-start-color: "var(--paper-slider-knob-start-border-color)"
+        paper-progress-active-color: "var(--slider-color)"
+        paper-progress-secondary-color: "var(--paper-progress-active-color)"
+      
+        # Switches
+        # Knob on
+        paper-toggle-button-checked-button-color: "var(--switch-checked-button-color)"
+        # Knob off
+        paper-toggle-button-unchecked-button-color: "var(--switch-unchecked-button-color)"
+        # Background on
+        paper-toggle-button-checked-bar-color: "var(--switch-checked-track-color)"
+        # Background off
+        paper-toggle-button-unchecked-bar-color: "var(--switch-unchecked-track-color)"
+
+        # Toasts
+        paper-toast-background-color: "var(--text-color)"
+        paper-toast-color: "var(--background-card-color)"
+
+        # Left sidebar menu
+        # Background
+        sidebar-background-color: "var(--background-color)"
+        # Icons
+        sidebar-icon-color: "var(--text-medium-color)"
+        # Selected row icon and background
+        sidebar-selected-icon-color: "var(--accent-color)"
+        # Selected row label
+        sidebar-selected-text-color: "var(--accent-color)"
+
+        # Configuration page
+        # Title 
+        paper-card-header-color: "var(--text-color)"
+        # Data tables (introduced in 0.100) background
+        data-table-background-color: "var(--background-color)"
+
+        # Shadows
+        shadow-elevation-4dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-6dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-8dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-10dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-12dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-14dp_-_box-shadow: "var(--shadow-elevation-2dp_-_box-shadow)"
+        shadow-elevation-16dp_-_box-shadow: "var(--ha-card-box-shadow)"
+      
+      <<: &light_theme
+        # Light theme specific aliases
+        google-red-500: "var(--red-500)"
+        google-green-500: "var(--green-500)"
+        google-blue-700: "var(--blue-500)"
+        paper-grey-400: "var(--cool-gray-400)"
+
+        # Colors
+        text-color: "var(--cool-gray-700)"
+        text-medium-color: "var(--cool-gray-500)"
+        text-light-color: "var(--cool-gray-400)"
+        background-color: "var(--cool-gray-100)"
+        background-card-color: "var(--white)"
+        border-color: "var(--cool-gray-300)"
+
+        # Sliders
+        slider-bar-color: "var(--cool-gray-400)"
+
+        # States table row background colors
+        table-row-background-color: "var(--white)"
+        table-row-alternative-background-color: "var(--cool-gray-50)"
+
+        # Shadows
+        shadow-elevation-2dp_-_box-shadow: "inset 0px 0px 0px 1px var(--border-color)"
+        ha-card-box-shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+
+      <<: &blue_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--blue-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--blue-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--blue-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--blue-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+    
+      <<: &light_blue_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#3f83f8"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--blue-500)"
+        slider-color: "var(--blue-400)"
+    
+    tailwind-dark-blue:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+
+      <<: &dark_theme
+        # Dark theme specific aliases
+        google-red-500: "var(--red-500)"
+        google-green-500: "var(--green-400)"
+        google-blue-700: "var(--blue-400)"
+        paper-grey-400: "var(--cool-gray-400)"
+
+        # Colors
+        text-color: "var(--cool-gray-300)"
+        text-medium-color: "var(--cool-gray-400)"
+        text-light-color: "var(--cool-gray-600)"
+        background-color: "var(--cool-gray-800)"
+        background-card-color: "var(--cool-gray-700)"
+        border-color: "var(--cool-gray-800)"
+
+        # Sliders
+        slider-bar-color: "var(--cool-gray-500)"
+      
+        # States table row background colors
+        table-row-background-color: "var(--cool-gray-500)"
+        table-row-alternative-background-color: "var(--cool-gray-600)"
+
+        # Shadows
+        shadow-elevation-2dp_-_box-shadow: "inset 0px 0px 0px 1px var(--border-color)"
+        ha-card-box-shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+      
+      <<: *blue_theme
+
+      <<: &dark_blue_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+      
+        # Sliders
+        paper-slider-knob-color: "var(--blue-400)"
+        slider-color: "var(--blue-500)"
+
+    tailwind-light-red:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &red_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--red-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--red-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--red-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--red-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_red_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#f05252"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--red-500)"
+        slider-color: "var(--red-400)"
+
+    tailwind-dark-red:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *red_theme
+        
+      <<: &dark_red_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--red-400)"
+        slider-color: "var(--red-500)"
+
+    tailwind-light-orange:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &orange_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--orange-400)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--orange-400)"
+
+        # Switches
+        switch-checked-button-color: "var(--orange-400)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--orange-400)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_orange_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#ff8a4c"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--orange-400)"
+        slider-color: "var(--orange-300)"
+
+    tailwind-dark-orange:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *orange_theme
+        
+      <<: &dark_orange_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--orange-300)"
+        slider-color: "var(--orange-400)"
+    
+    tailwind-light-yellow:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &yellow_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--yellow-300)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--yellow-300)"
+
+        # Switches
+        switch-checked-button-color: "var(--yellow-300)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--yellow-300)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_yellow_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#faca15"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--yellow-300)"
+        slider-color: "var(--yellow-200)"
+
+    tailwind-dark-yellow:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *yellow_theme
+        
+      <<: &dark_yellow_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--yellow-200)"
+        slider-color: "var(--yellow-300)"
+    
+    tailwind-light-green:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &green_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--green-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--green-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--green-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--green-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_green_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#0e9f6e"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--green-500)"
+        slider-color: "var(--green-400)"
+
+    tailwind-dark-green:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *green_theme
+        
+      <<: &dark_green_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--green-300)"
+        slider-color: "var(--green-400)"
+
+    tailwind-light-teal:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &teal_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--teal-400)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--teal-400)"
+
+        # Switches
+        switch-checked-button-color: "var(--teal-400)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--teal-400)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_teal_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#16bdca"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--teal-400)"
+        slider-color: "var(--teal-300)"
+
+    tailwind-dark-teal:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *teal_theme
+        
+      <<: &dark_teal_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--teal-300)"
+        slider-color: "var(--teal-400)"
+
+    tailwind-light-indigo:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &indigo_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--indigo-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--indigo-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--indigo-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--indigo-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_indigo_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#6875f5"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--indigo-500)"
+        slider-color: "var(--indigo-400)"
+
+    tailwind-dark-indigo:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+      <<: *indigo_theme
+        
+      <<: &dark_indigo_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--indigo-400)"
+        slider-color: "var(--indigo-500)"
+
+    tailwind-light-purple:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &purple_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--purple-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--purple-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--purple-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--purple-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_purple_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#9061f9"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--purple-500)"
+        slider-color: "var(--purple-400)"
+
+    tailwind-dark-purple:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+
+      <<: *purple_theme
+      <<: &dark_purple_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--purple-400)"
+        slider-color: "var(--purple-500)"
+
+    tailwind-light-pink:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &pink_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--pink-500)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--pink-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--pink-500)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--pink-500)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+      <<: &light_pink_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#e74694"
+        # Header text
+        text-primary-color: "var(--white)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--pink-500)"
+        slider-color: "var(--pink-400)"
+
+    tailwind-dark-pink:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+
+      <<: *pink_theme
+      <<: &dark_pink_theme
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--pink-400)"
+        slider-color: "var(--pink-500)"
+    
+    tailwind-light-gray:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *light_theme
+
+      <<: &light_gray_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--cool-gray-700)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--cool-gray-200)"
+
+        # Switches
+        switch-checked-button-color: "var(--cool-gray-700)"
+        switch-unchecked-button-color: "var(--white)"
+        switch-checked-track-color: "var(--cool-gray-700)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+
+        # Header background + PWA manifest theme color
+        primary-color: "#e2e8f0"
+        # Header text
+        text-primary-color: "var(--cool-gray-700)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--cool-gray-700)"
+        slider-color: "var(--cool-gray-500)"
+    
+    tailwind-dark-gray:
+      <<: *colors
+      <<: *fonts
+      <<: *aliases
+      <<: *dark_theme
+
+      <<: &dark_gray_theme
+        # Accent color, used for things like colored icons
+        accent-color: "var(--cool-gray-100)"
+
+        # Action buttons (save, restart etc.) in the settings menu
+        mdc-theme-primary: "var(--cool-gray-500)"
+
+        # Switches
+        switch-checked-button-color: "var(--white)"
+        switch-unchecked-button-color: "var(--cool-gray-300)"
+        switch-checked-track-color: "var(--cool-gray-100)"
+        switch-unchecked-track-color: "var(--cool-gray-500)"
+        
+        # Header background + PWA manifest theme color
+        primary-color: "#1a202e"
+        # Header text
+        text-primary-color: "var(--cool-gray-300)"
+
+        # Sliders
+        paper-slider-knob-color: "var(--cool-gray-50)"
+        slider-color: "var(--cool-gray-300)"
