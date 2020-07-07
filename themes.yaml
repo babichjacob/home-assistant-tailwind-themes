@@ -314,6 +314,9 @@ frontend:
         google-blue-700: "var(--blue-500)"
         paper-grey-400: "var(--cool-gray-400)"
 
+        # Border radius
+        ha-card-border-radius: "6px"
+
         # Colors
         text-color: "var(--cool-gray-700)"
         text-medium-color: "var(--cool-gray-500)"
@@ -367,6 +370,9 @@ frontend:
         google-green-500: "var(--green-400)"
         google-blue-700: "var(--blue-400)"
         paper-grey-400: "var(--cool-gray-400)"
+
+        # Border radius
+        ha-card-border-radius: "6px"
 
         # Colors
         text-color: "var(--cool-gray-300)"
