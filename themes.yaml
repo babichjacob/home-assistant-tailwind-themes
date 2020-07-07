@@ -230,6 +230,7 @@ frontend:
       <<: &fonts
         primary-font-family: '-apple-system, BlinkMacSystemFont, "San Francisco", system-ui, "Google Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
         ha-card-header-font-family: "var(--primary-font-family)"
+        paper-font-body1_-_font-family: "var(--primary-font-family)"
       
       <<: &aliases
         paper-card-background-color: "var(--background-card-color)"
