@@ -33,7 +33,9 @@ This is a collection of 10 colored themes with light and dark variants, built fr
 Copy the **entire** contents of `themes.yaml` into somewhere Home Assistant (Core) reads your configuration. 
 This means you could give it its own file in your `packages` directory, or you could put it directly in the root `configuration.yaml` file, or whatever is most appropriate for your setup.
 
-Restart Home Assistant (Core) and verify that the `tailwind-light-blue` and `tailwind-dark-blue` themes are correctly usable. You can then remove any other theme you don't want to use, as long as these two stay. *Be aware that dark theme variants are dependent on their light theme variant, so for example you cannot delete `tailwind-light-orange` and keep `tailwind-dark-orange` unless you move the `orange_theme` block to where it's referenced (`<<: *orange_theme`).*
+Restart Home Assistant (Core) and verify that the `tailwind-light-blue` and `tailwind-dark-blue` themes are correctly usable. You can then remove any other theme you don't want to use, as long as these two stay. 
+
+⚠️ Be aware that dark theme variants are dependent on their light theme variant, so for example you cannot delete `tailwind-light-orange` and keep `tailwind-dark-orange` unless you move the `orange_theme` block to where it's referenced (`<<: *orange_theme`).
 
 ## 🛠 Usage
 You can access the Tailwind color variables like `var(--red-500)` wherever a color is expected in Lovelace, such as in CSS `style` blocks from [`card-mod`](https://github.com/thomasloven/lovelace-card-mod/). 
