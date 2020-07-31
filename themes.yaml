@@ -48,7 +48,7 @@ frontend:
         orange-600: "#d03801"
         orange-700: "#b43403"
         orange-800: "#8a2c0d"
-        orange-900: "#771d1d"
+        orange-900: "#73230d"
 
         yellow-50: "#fdfdea"
         yellow-100: "#fdf6b2"
