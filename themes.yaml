@@ -233,6 +233,7 @@ frontend:
         paper-font-body1_-_font-family: "var(--primary-font-family)"
       
       <<: &aliases
+        ha-card-background: "var(--background-card-color)"
         paper-card-background-color: "var(--background-card-color)"
         primary-background-color: "var(--background-color)"
         secondary-background-color: "var(--background-card-color)"
@@ -326,8 +327,14 @@ frontend:
         border-color: "var(--cool-gray-300)"
 
         # Popup backdrop
+        # Before 0.113
         iron-overlay-backdrop-opacity: "0.8125"
         iron-overlay-backdrop-background-color: "var(--background-color)"
+        # --background-color (--cool-gray-100) converted to RGB
+        mdc-dialog-scrim-color: "rgba(241, 245, 249, var(--iron-overlay-backdrop-opacity))"
+
+        # Popup drop shadow
+        mdc-dialog-box-shadow: "var(--shadow-elevation-16dp_-_box-shadow)"
 
         # Sliders
         slider-bar-color: "var(--cool-gray-400)"
@@ -388,8 +395,14 @@ frontend:
         border-color: "var(--cool-gray-800)"
 
         # Popup backdrop
+        # Before 0.113
         iron-overlay-backdrop-opacity: "0.875"
         iron-overlay-backdrop-background-color: "var(--background-color)"
+        # --background-color (--cool-gray-800) converted to RGB
+        mdc-dialog-scrim-color: "rgba(39, 48, 63, var(--iron-overlay-backdrop-opacity))"
+
+        # Popup drop shadow
+        mdc-dialog-box-shadow: "var(--shadow-elevation-16dp_-_box-shadow)"
 
         # Sliders
         slider-bar-color: "var(--cool-gray-500)"
