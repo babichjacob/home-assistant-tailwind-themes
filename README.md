@@ -10,12 +10,11 @@ This is a collection of 10 colored themes with light and dark variants, built fr
     <td style="color: white; background-color: #faca15;">Yellow</td>
     <td style="color: white; background-color: #0e9f6e;">Green</td>
     <td style="color: white; background-color: #16bdca;">Teal</td>
-  </tr>
-    <td style="color: #364152; background-color: #e2e8f0;">Gray</td>
-    <td style="color: white; background-color: #e74694;">Pink</td>
-    <td style="color: white; background-color: #9061f9;">Purple</td>
-    <td style="color: white; background-color: #6875f5;">Indigo</td>
     <td style="color: white; background-color: #3f83f8;">Blue</td>
+    <td style="color: white; background-color: #6875f5;">Indigo</td>
+    <td style="color: white; background-color: #9061f9;">Purple</td>
+    <td style="color: white; background-color: #e74694;">Pink</td>
+    <td style="color: #364152; background-color: #e2e8f0;">Gray</td>
   </tr>
 </table>
 
