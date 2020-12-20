@@ -240,7 +240,6 @@ frontend:
         dark-primary-color: "var(--text-color)"
         primary-text-color: "var(--text-color)"
         paper-listbox-color: "var(--text-color)"
-        paper-listbox-background-color: "var(--background-color)"
         disabled-text-color: "var(--text-light-color)"
         light-primary-color: "var(--text-medium-color)"
         secondary-text-color: "var(--text-medium-color)"
@@ -326,6 +325,9 @@ frontend:
         background-card-color: "var(--white)"
         border-color: "var(--cool-gray-300)"
 
+        # Dropdowns
+        paper-listbox-background-color: "var(--white)"
+
         # Popup backdrop
         # Before 0.113
         iron-overlay-backdrop-opacity: "0.8125"
@@ -344,7 +346,7 @@ frontend:
         table-row-alternative-background-color: "var(--cool-gray-50)"
 
         # Shadows
-        shadow-elevation-2dp_-_box-shadow: "inset 0px 0px 0px 1px var(--border-color)"
+        shadow-elevation-2dp_-_box-shadow: "var(--shadow)"
         shadow-elevation-16dp_-_box-shadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
         ha-card-box-shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 
@@ -394,6 +396,9 @@ frontend:
         background-card-color: "var(--cool-gray-700)"
         border-color: "var(--cool-gray-800)"
 
+        # Dropdowns
+        paper-listbox-background-color: "var(--cool-gray-600)"
+
         # Popup backdrop
         # Before 0.113
         iron-overlay-backdrop-opacity: "0.875"
@@ -412,7 +417,7 @@ frontend:
         table-row-alternative-background-color: "var(--cool-gray-600)"
 
         # Shadows
-        shadow-elevation-2dp_-_box-shadow: "inset 0px 0px 0px 1px var(--border-color)"
+        shadow-elevation-2dp_-_box-shadow: "var(--shadow)"
         shadow-elevation-16dp_-_box-shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
         ha-card-box-shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
       
